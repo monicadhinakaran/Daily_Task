@@ -1,0 +1,29 @@
+package dailyTask;
+
+import java.util.Scanner;
+
+public class ReverseDigit {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		ReverseDigit r = new ReverseDigit();
+		System.out.println(r.Reverse(num));	
+		
+	}
+	
+	boolean Reverse(int digit) {
+		int rev = 0;
+		int num = digit;
+		
+		while(digit > 0) {
+			int temp = digit % 10;
+			rev = temp + rev*10 ;
+			digit /= 10;
+		}
+		
+		return num == rev ? true : false;
+	}
+
+}
